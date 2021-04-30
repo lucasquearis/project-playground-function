@@ -1,22 +1,22 @@
 // Desafio 1
 function compareTrue(a, b) {
-  if(a && b){
-    return true;
+  if (a && b) {
+    break;
   } else {
     return false;
   }
 }
 // Desafio 2
 function calcArea(base, height) {
-  return (base * height / 2)
+  return (base * height) / 2;
 }
 
 // Desafio 3
 function splitSentence(string) {
   let arrayPalavra = [];
-  arrayPalavra.push(string.split(" "));
+  arrayPalavra.push(string.split(' '));
   return arrayPalavra;
-  }
+}
 
 // Desafio 4
 function concatName(arrays) {
