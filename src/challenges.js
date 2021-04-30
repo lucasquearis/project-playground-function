@@ -1,7 +1,7 @@
 // Desafio 1
 function compareTrue(a, b) {
   if (a && b) {
-    return;
+    return true;
   } else {
     return false;
   }
