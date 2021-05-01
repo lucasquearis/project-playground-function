@@ -2,9 +2,7 @@
 function compareTrue(a, b) {
   if (a && b) {
     return true;
-  } else {
-    return false;
-  }
+  };
 }
 // Desafio 2
 function calcArea(base, height) {
@@ -38,12 +36,11 @@ function footballPoints(wins, ties) {
 function highestCount(arrayNumber) {
   let numeroMaior = Math.max(...arrayNumber);
   let numeroRepeticao = 0;
-  for(let index = 0; index < arrayNumber.length; index+=1){
-    if(arrayNumber[index] === numeroMaior){
-      numeroRepeticao +=1;
+  for (let index = 0; index < arrayNumber.length; index += 1) {
+    if (arrayNumber[index] === numeroMaior) {
+      numeroRepeticao += 1;
     }
   }
-  
   console.log(numeroRepeticao);
   return numeroRepeticao;
 }
@@ -53,28 +50,27 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanciaCat1 = Math.abs(cat1 - mouse);
   let distanciaCat2 = Math.abs(cat2 - mouse);
 
-  if(distanciaCat1 > distanciaCat2){
+  if (distanciaCat1 > distanciaCat2) {
     return 'cat2';
-  } else if(distanciaCat1 < distanciaCat2){
+  } else if (distanciaCat1 < distanciaCat2) {
     return 'cat1';
   } else {
-    return 'os gatos trombam e o rato foge'
+    return 'os gatos trombam e o rato foge';
   }
 }
-
 
 // Desafio 8
 function fizzBuzz(arrayNumbers) {
   let fizzBuzzBug = [];
-  for(let index = 0; index < arrayNumbers.length; index +=1){
-    if((arrayNumbers[index] % 3) === 0 && (arrayNumbers[index] % 5) === 0){
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
+    if ((arrayNumbers[index] % 3) === 0 && (arrayNumbers[index] % 5) === 0) {
       fizzBuzzBug.push('fizzBuzz');
-    }else if((arrayNumbers[index] % 3) === 0){
+    } else if ((arrayNumbers[index] % 3) === 0) {
       fizzBuzzBug.push('fizz');
-    } else if ((arrayNumbers[index]) % 5 === 0){
+    } else if ((arrayNumbers[index]) % 5 === 0) {
       fizzBuzzBug.push('buzz');
     } else {
-      fizzBuzzBug.push('bug!')
+      fizzBuzzBug.push('bug!');
     }
   }
   return fizzBuzzBug;
@@ -83,18 +79,18 @@ function fizzBuzz(arrayNumbers) {
 // Desafio 9
 function encode(codificado) {
   let fraseCodificada = [];
-  for(let index = 0; index < codificado.length; index +=1){
-  if(codificado[index] === "a"){
+  for (let index = 0; index < codificado.length; index += 1) {
+  if (codificado[index] === "a"){
     fraseCodificada.push(1);
-  }else if(codificado[index] === "e"){
+  } else if (codificado[index] === "e") {
     fraseCodificada.push(2);
-  }else if(codificado[index] === "i"){
+  } else if (codificado[index] === "i") {
     fraseCodificada.push(3);
-  }else if(codificado[index] === "o"){
+  } else if (codificado[index] === "o") {
     fraseCodificada.push(4);
-  }else if(codificado[index] === "u"){
+  } else if (codificado[index] === "u") {
     fraseCodificada.push(5);
-  }else{
+  } else {
     fraseCodificada.push(codificado[index]);
   }
   }
@@ -103,22 +99,22 @@ function encode(codificado) {
 }
 function decode(decodificado) {
   let fraseDecodificada = [];
-  for(let index = 0; index < decodificado.length; index +=1){
-  if(decodificado[index] === "1"){
+  for (let index = 0; index < decodificado.length; index +=1 ) {
+  if(decodificado[index] === "1") {
     fraseDecodificada.push("a");
-  }else if(decodificado[index] === "2"){
+  } else if (decodificado[index] === "2") {
     fraseDecodificada.push("e");
-  }else if(decodificado[index] === "3"){
+  } else if (decodificado[index] === "3") {
     fraseDecodificada.push("i");
-  }else if(decodificado[index] === "4"){
+  } else if (decodificado[index] === "4") {
     fraseDecodificada.push("o");
-  }else if(decodificado[index] === "5"){
+  } else if (decodificado[index] === "5") {
     fraseDecodificada.push("u");
-  }else{
+  } else {
     fraseDecodificada.push(decodificado[index]);
   }
   }
-  let concatFrase = fraseDecodificada.join("")
+  let concatFrase = fraseDecodificada.join("");
   return concatFrase;
 }
 
