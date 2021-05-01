@@ -82,18 +82,19 @@ function fizzBuzz(arrayNumbers) {
 function encode(codificado) {
   let fraseCodificada = [];
   for (let index = 0; index < codificado.length; index += 1) {
-    if (codificado[index] === 'a') {
+    let decodificador = codificado[index];
+    if (decodificador === 'a') {
       fraseCodificada.push(1);
-    } else if (codificado[index] === 'e') {
+    } else if (decodificador === 'e') {
       fraseCodificada.push(2);
-    } else if (codificado[index] === 'i') {
+    } else if (decodificador === 'i') {
       fraseCodificada.push(3);
-    } else if (codificado[index] === 'o') {
+    } else if (decodificador === 'o') {
       fraseCodificada.push(4);
-    } else if (codificado[index] === 'u') {
+    } else if (decodificador === 'u') {
       fraseCodificada.push(5);
     } else {
-      fraseCodificada.push(codificado[index]);
+      fraseCodificada.push(decodificador);
     }
   }
   let concatFrase = fraseCodificada.join('');
@@ -102,18 +103,19 @@ function encode(codificado) {
 function decode(decodificado) {
   let fraseDecodificada = [];
   for (let index = 0; index < decodificado.length; index += 1){
-    if (decodificado[index] === '1') {
+    let decodificador = decodificado[index];
+    if (decodificador === '1') {
       fraseDecodificada.push('a');
-    } else if (decodificado[index] === '2') {
+    } else if (decodificador === '2') {
       fraseDecodificada.push('e');
-    } else if (decodificado[index] === '3') {
+    } else if (decodificador === '3') {
       fraseDecodificada.push('i');
-    } else if (decodificado[index] === '4') {
+    } else if (decodificador === '4') {
       fraseDecodificada.push('o');
-    } else if (decodificado[index] === '5') {
+    } else if (decodificador === '5') {
       fraseDecodificada.push('u');
     } else {
-      fraseDecodificada.push(decodificado[index]);
+      fraseDecodificada.push(decodificador);
     }
   }
   let concatFrase = fraseDecodificada.join('');
