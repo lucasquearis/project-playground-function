@@ -85,15 +85,15 @@ function encode(codificado) {
     if (codificado[index] === 'a') {
       fraseCodificada.push(1);
     } else if (codificado[index] === 'e') {
-    fraseCodificada.push(2);
+      fraseCodificada.push(2);
     } else if (codificado[index] === 'i') {
-    fraseCodificada.push(3);
+      fraseCodificada.push(3);
     } else if (codificado[index] === 'o') {
-    fraseCodificada.push(4);
+      fraseCodificada.push(4);
     } else if (codificado[index] === 'u') {
-    fraseCodificada.push(5);
+      fraseCodificada.push(5);
     } else {
-    fraseCodificada.push(codificado[index]);
+      fraseCodificada.push(codificado[index]);
     }
   }
   let concatFrase = fraseCodificada.join('');
@@ -101,15 +101,15 @@ function encode(codificado) {
 }
 function decode(decodificado) {
   let fraseDecodificada = [];
-  for (let index = 0; index < decodificado.length; index += 1 ){
+  for (let index = 0; index < decodificado.length; index += 1){
     if (decodificado[index] === '1') {
       fraseDecodificada.push('a');
     } else if (decodificado[index] === '2') {
-    fraseDecodificada.push('e');
+      fraseDecodificada.push('e');
     } else if (decodificado[index] === '3') {
-    fraseDecodificada.push('i');
+      fraseDecodificada.push('i');
     } else if (decodificado[index] === '4') {
-    fraseDecodificada.push('o');
+      fraseDecodificada.push('o');
     } else if (decodificado[index] === '5') {
       fraseDecodificada.push('u');
     } else {
