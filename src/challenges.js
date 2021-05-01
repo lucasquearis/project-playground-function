@@ -81,11 +81,45 @@ function fizzBuzz(arrayNumbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(codificado) {
+  let fraseCodificada = [];
+  for(let index = 0; index < codificado.length; index +=1){
+  if(codificado[index] === "a"){
+    fraseCodificada.push(1);
+  }else if(codificado[index] === "e"){
+    fraseCodificada.push(2);
+  }else if(codificado[index] === "i"){
+    fraseCodificada.push(3);
+  }else if(codificado[index] === "o"){
+    fraseCodificada.push(4);
+  }else if(codificado[index] === "u"){
+    fraseCodificada.push(5);
+  }else{
+    fraseCodificada.push(codificado[index]);
+  }
+  }
+  let concatFrase = fraseCodificada.join("")
+  return concatFrase;
 }
-function decode() {
-  // seu código aqui
+function decode(decodificado) {
+  let fraseDecodificada = [];
+  for(let index = 0; index < decodificado.length; index +=1){
+  if(decodificado[index] === "1"){
+    fraseDecodificada.push("a");
+  }else if(decodificado[index] === "2"){
+    fraseDecodificada.push("e");
+  }else if(decodificado[index] === "3"){
+    fraseDecodificada.push("i");
+  }else if(decodificado[index] === "4"){
+    fraseDecodificada.push("o");
+  }else if(decodificado[index] === "5"){
+    fraseDecodificada.push("u");
+  }else{
+    fraseDecodificada.push(decodificado[index]);
+  }
+  }
+  let concatFrase = fraseDecodificada.join("")
+  return concatFrase;
 }
 
 module.exports = {
