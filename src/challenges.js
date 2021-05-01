@@ -2,6 +2,8 @@
 function compareTrue(a, b) {
   if (a && b) {
     return true;
+  } else {
+    return false;
   };
 }
 // Desafio 2
@@ -110,9 +112,9 @@ function decode(decodificado) {
     fraseDecodificada.push("o");
   } else if (decodificado[index] === "5") {
     fraseDecodificada.push("u");
-  } else {
-    fraseDecodificada.push(decodificado[index]);
-  }
+    } else {
+      fraseDecodificada.push(decodificado[index]);
+    }
   }
   let concatFrase = fraseDecodificada.join("");
   return concatFrase;
