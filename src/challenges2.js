@@ -9,13 +9,11 @@ function techList(tecnologias, nome){
       name: nome
     });
   }
-  if(tecnologias.length = 0) {
-    return 'Vazio!';
-} else {
-  return arrayObj;
+  if(tecnologias.length === 0) {
+    return 'Vazio!'
 }
+return arrayObj;
 }
-
 
 // Desafio 11
 function generatePhoneNumber() {
