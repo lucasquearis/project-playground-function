@@ -2,9 +2,8 @@
 function compareTrue(a, b) {
   if (a && b) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 // Desafio 2
 function calcArea(base, height) {
@@ -56,9 +55,8 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat2';
   } else if (distanciaCat1 < distanciaCat2) {
     return 'cat1';
-  } else {
-    return 'os gatos trombam e o rato foge';
   }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
