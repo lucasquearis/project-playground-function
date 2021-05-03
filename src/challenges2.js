@@ -16,7 +16,8 @@ return arrayObj;
 }
 
 // Desafio 11
-// function generatePhoneNumber(arrayTelefone) {
+function generatePhoneNumber(arrayTelefone) 
+// {
 //   let numeroRepetidor = 0;
   
 //   for(let indexTelefone = 0; indexTelefone < arrayTelefone.length; indexTelefone +=1){
