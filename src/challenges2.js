@@ -16,9 +16,21 @@ return arrayObj;
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
-}
+// function generatePhoneNumber(arrayTelefone) {
+//   let numeroRepetidor = 0;
+  
+//   for(let indexTelefone = 0; indexTelefone < arrayTelefone.length; indexTelefone +=1){
+//     let memory = arrayTelefone[indexTelefone];
+//     for(let indexRepetidor = 0; indexRepetidor < arrayTelefone.length; indexRepetidor +=1){
+//       if (arrayTelefone[indexRepetidor] === memory){
+//         numeroRepetidor += 1
+//       }
+//     }
+//     console.log(numeroRepetidor);
+//   }
+// }
+
+// generatePhoneNumber([1, 1, 1, 1]);
 
 // Desafio 12
 function triangleCheck() {
