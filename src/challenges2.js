@@ -30,11 +30,11 @@ function generatePhoneNumber(numeros){
 }
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if(lineA < (lineB + lineC) && lineA > (lineB - lineC)){
+  if(Math.abs(lineA) < (Math.abs(lineB) + Math.abs(lineC)) && Math.abs(lineA) > (Math.abs(lineB) - Math.abs(lineC))){
     return true;
-  } else if(lineB < (lineA + lineC) && lineB > (lineA - lineC)){
+  } else if(Math.abs(lineB) < (Math.abs(lineA) + lineC) && Math.abs(lineB) > (Math.abs(lineA) - Math.abs(lineC))){
     return true;
-  } else if(lineC < (lineB + lineA) && lineC > (lineB - lineA)){
+  } else if(Math.abs(lineC) < (Math.abs(lineB) + Math.abs(lineA)) && lineC > (Math.abs(lineB) - Math.abs(lineA))){
     return true;
   } else {
     return false;
