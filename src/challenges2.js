@@ -29,8 +29,16 @@ function generatePhoneNumber(numeros){
   return '(' + numeros[0] + numeros [1] + ') ' + numeros[2]+ numeros[3] + numeros[4] + numeros[5] + numeros[6] + '-' + numeros[7] + numeros[8] + numeros[9] + numeros[10]
 }
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if(lineA < (lineB + lineC) && lineA > (lineB - lineC)){
+    return true;
+  } else if(lineB < (lineA + lineC) && lineB > (lineA - lineC)){
+    return true;
+  } else if(lineC < (lineB + lineA) && lineC > (lineB - lineA)){
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 13
