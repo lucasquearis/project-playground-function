@@ -27,6 +27,7 @@ function generatePhoneNumber(n) {
     } else if (n[index] > 9 || n[index] < 0) {
       return "não é possível gerar um número de telefone com esses valores";
     } else {
+      numeroRepeticao = 1;
       for (let comparador = 0; comparador < n.length; comparador += 1) {
         if (comparador === index) {
           numeroRepeticao = numeroRepeticao
