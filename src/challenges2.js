@@ -1,44 +1,44 @@
 // Desafio 10
-function techList(tecnologias, nome){
+function techList(tecnologias, nome) {
   tecnologias.sort();
-  let arrayObj = []
+  let arrayObj = [];
 
-  for (index = 0; index < tecnologias.length; index += 1){
+  for (let index = 0; index < tecnologias.length; index += 1) {
     arrayObj.push({
       tech: tecnologias[index],
-      name: nome
+      name: nome,
     });
   }
-  if(tecnologias.length === 0) {
-    return 'Vazio!'
-}
-return arrayObj;
+  if (tecnologias.length === 0) {
+    return 'Vazio!';
+  }
+  return arrayObj;
 }
 
 // Desafio 11
-function generatePhoneNumber(numeros){
-  if(numeros.length != 11){
-    return "Array com tamanho incorreto."
+function generatePhoneNumber(n) {
+  if (n.length !== 11) {
+    return 'Array com tamanho incorreto.';
   }
-  const numerosSemRepeticao = [...new Set(numeros)]
-  for(let index = 0; index < numeros.length; index += 1){
-    if(numerosSemRepeticao.length <= 9 || numeros[index] > 9 || numeros[index] < 0){
-      return "não é possível gerar um número de telefone com esses valores"
+  let numeroRepeticao = 1;
+  for (let index = 0; index < n.length; index += 1) {
+    if (numeroRepeticao >= 3 || n[index] > 9 || n[index] < 0) {
+      return "não é possível gerar um número de telefone com esses valores";
+    } else {
+      for (let comparador = 0; comparador < n.length; comparador += 1) {
+        if (comparador === index) {
+          break;
+        } else if (n[index] === n[comparador]) {
+          numeroRepeticao += 1;
+        }
+      }
     }
   }
-  return '(' + numeros[0] + numeros [1] + ') ' + numeros[2]+ numeros[3] + numeros[4] + numeros[5] + numeros[6] + '-' + numeros[7] + numeros[8] + numeros[9] + numeros[10]
+  return `(${n[0]}${n[1]}) ${n[2]}${n[3]}${n[4]}${n[5]}${n[6]}-${n[7]}${n[8]}${n[9]}${n[10]}`;
 }
 // Desafio 12
-function triangleCheck(lineA, lineB, lineC) {
-  if(Math.abs(lineA) < (Math.abs(lineB) + Math.abs(lineC)) && Math.abs(lineA) > (Math.abs(lineB) - Math.abs(lineC))){
-    return true;
-  } else if(Math.abs(lineB) < (Math.abs(lineA) + lineC) && Math.abs(lineB) > (Math.abs(lineA) - Math.abs(lineC))){
-    return true;
-  } else if(Math.abs(lineC) < (Math.abs(lineB) + Math.abs(lineA)) && lineC > (Math.abs(lineB) - Math.abs(lineA))){
-    return true;
-  } else {
-    return false;
-  }
+function triangleCheck() {
+
 }
 
 // Desafio 13
