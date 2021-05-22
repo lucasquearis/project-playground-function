@@ -60,7 +60,10 @@ function hydrate(string) {
     let converteNumeros = parseInt(resultados[index], 10);
     soma += converteNumeros;
   }
-  return `${soma} copos de água`;
+  if (soma > 1) {
+    return `${soma} copos de água`;
+  }
+  return `${soma} copo de água`;
 }
 
 module.exports = {

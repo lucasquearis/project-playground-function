@@ -42,7 +42,6 @@ function highestCount(arrayNumber) {
       numeroRepeticao += 1;
     }
   }
-  console.log(numeroRepeticao);
   return numeroRepeticao;
 }
 
@@ -53,7 +52,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
   if (distanciaCat1 > distanciaCat2) {
     return 'cat2';
-  } else if (distanciaCat1 < distanciaCat2) {
+  } if (distanciaCat1 < distanciaCat2) {
     return 'cat1';
   }
   return 'os gatos trombam e o rato foge';
@@ -100,7 +99,7 @@ function encode(codificado) {
 }
 function decode(decodificado) {
   let fraseDecodificada = [];
-  for (let index = 0; index < decodificado.length; index += 1){
+  for (let index = 0; index < decodificado.length; index += 1) {
     let decodificador = decodificado[index];
     if (decodificador === '1') {
       fraseDecodificada.push('a');
