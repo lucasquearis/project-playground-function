@@ -41,8 +41,14 @@ function generatePhoneNumber(n) {
 }
 
 // Desafio 12
-function triangleCheck() {
-
+function triangleCheck(a, b, c) {
+  let comparacaoLadosA = a < (b + c) && a > Math.abs(b - c);
+  let comparacaoLadosB = b < (a + c) && b > Math.abs(a - c);
+  let comparacaoLadosC = c < (a + b) && c > Math.abs(a - b);
+  if (comparacaoLadosA && comparacaoLadosB && comparacaoLadosC) {
+    return true;
+  }
+  return false;
 }
 
 // Desafio 13
