@@ -22,6 +22,7 @@ function generatePhoneNumber(n) {
   }
   let numeroRepeticao = 1;
   for (let index = 0; index < n.length; index += 1) {
+    numeroRepeticao = 1;
     if (numeroRepeticao >= 3 || n[index] > 9 || n[index] < 0) {
       return "não é possível gerar um número de telefone com esses valores";
     } else {
@@ -36,6 +37,7 @@ function generatePhoneNumber(n) {
   }
   return `(${n[0]}${n[1]}) ${n[2]}${n[3]}${n[4]}${n[5]}${n[6]}-${n[7]}${n[8]}${n[9]}${n[10]}`;
 }
+
 // Desafio 12
 function triangleCheck() {
 
