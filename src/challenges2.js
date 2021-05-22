@@ -22,13 +22,14 @@ function generatePhoneNumber(n) {
   }
   let numeroRepeticao = 1;
   for (let index = 0; index < n.length; index += 1) {
-    numeroRepeticao = 1;
-    if (numeroRepeticao >= 3 || n[index] > 9 || n[index] < 0) {
+    if (numeroRepeticao >= 3 ){
+      return "não é possível gerar um número de telefone com esses valores";
+    } else if (n[index] > 9 || n[index] < 0) {
       return "não é possível gerar um número de telefone com esses valores";
     } else {
       for (let comparador = 0; comparador < n.length; comparador += 1) {
         if (comparador === index) {
-          break;
+          numeroRepeticao = numeroRepeticao
         } else if (n[index] === n[comparador]) {
           numeroRepeticao += 1;
         }
