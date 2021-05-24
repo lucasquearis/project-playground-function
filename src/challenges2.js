@@ -1,3 +1,4 @@
+/* eslint-disable complexity */
 // Desafio 10
 function techList(tecnologias, nome) {
   tecnologias.sort();
@@ -16,29 +17,52 @@ function techList(tecnologias, nome) {
 }
 
 // Desafio 11
-function generatePhoneNumber(n) {
-  if (n.length !== 11) {
+function verificaArray(param) {
+  if (param.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
-  let numeroRepeticao = 1;
-  for (let index = 0; index < n.length; index += 1) {
-    if (numeroRepeticao >= 3) {
-      return 'não é possível gerar um número de telefone com esses valores';
-    } if (n[index] > 9 || n[index] < 0) {
+  for (let index = 0; index < param.length; index += 1) {
+    if (param[index] > 9 || param[index] < 0) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
-    numeroRepeticao = 1;
-    for (let comparador = 0; comparador < n.length; comparador += 1) {
-      if (comparador === index) {
-        numeroRepeticao = numeroRepeticao;
-      } else if (n[index] === n[comparador]) {
-        numeroRepeticao += 1;
+  }
+  return true;
+}
+
+function verificaIgualdade(indiceone, indicetwo) {
+  if (indiceone === indicetwo) {
+    return true;
+  }
+  return false;
+}
+// eslint-disable-next-line sonarjs/cognitive-complexity
+function verificaRepeticao(param) {
+  let resposta = 1;
+  for (let index = 0; index < param.length; index += 1) {
+    if (resposta >= 3) {
+      return resposta;
+    }
+    resposta = 1;
+    for (let comparador = 0; comparador < param.length; comparador += 1) {
+      if (verificaIgualdade(index, comparador) === true) {
+        comparador += comparador;
+      } else if (verificaIgualdade(param[index], param[comparador]) === true) {
+        resposta += 1;
       }
     }
   }
-  return `(${n[0]}${n[1]}) ${n[2]}${n[3]}${n[4]}${n[5]}${n[6]}-${n[7]}${n[8]}${n[9]}${n[10]}`;
+  return resposta;
 }
 
+function generatePhoneNumber(n) {
+  if (verificaArray(n) === true) {
+    if (verificaRepeticao(n) >= 3) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+    return `(${n[0]}${n[1]}) ${n[2]}${n[3]}${n[4]}${n[5]}${n[6]}-${n[7]}${n[8]}${n[9]}${n[10]}`;
+  }
+  return verificaArray(n);
+}
 // Desafio 12
 function triangleCheck(a, b, c) {
   let comparacaoLadosA = a < (b + c) && a > Math.abs(b - c);
