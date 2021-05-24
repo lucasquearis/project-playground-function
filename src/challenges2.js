@@ -28,39 +28,31 @@ function verificaArray(param) {
   return true;
 }
 
-function verificaIgualdade(indiceone, indicetwo) {
-  if (indiceone === indicetwo) {
-    return true;
-  }
-  return false;
-}
 function verificaRepeticao(param) {
-  let resposta = 1;
   for (let index = 0; index < param.length; index += 1) {
-    if (resposta >= 3) {
-      return resposta;
-    }
-    resposta = 1;
+    let resposta = 0;
     for (let comparador = 0; comparador < param.length; comparador += 1) {
-      if (verificaIgualdade(index, comparador) === true) {
-        comparador += comparador;
-      } else if (verificaIgualdade(param[index], param[comparador]) === true) {
+      if (param[index] === param[comparador]) {
         resposta += 1;
       }
     }
+    if (resposta >= 3) {
+      return false;
+    }
   }
-  return resposta;
+  return true;
 }
 
 function generatePhoneNumber(n) {
   if (verificaArray(n) === true) {
-    if (verificaRepeticao(n) >= 3) {
+    if (verificaRepeticao(n) === false) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
     return `(${n[0]}${n[1]}) ${n[2]}${n[3]}${n[4]}${n[5]}${n[6]}-${n[7]}${n[8]}${n[9]}${n[10]}`;
   }
   return verificaArray(n);
 }
+
 // Desafio 12
 function compararA(a, b, c) {
   if (a < (b + c) && a > Math.abs(b - c)) {
