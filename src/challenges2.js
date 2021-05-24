@@ -27,15 +27,18 @@ function verificaArray(param) {
   }
   return true;
 }
-
+function segundoFor(param, index) {
+  let numeroRepeticao = 0;
+  for (let comparador = 0; comparador < param.length; comparador += 1) {
+    if (param[index] === param[comparador]) {
+      numeroRepeticao += 1;
+    }
+  }
+  return numeroRepeticao;
+}
 function verificaRepeticao(param) {
   for (let index = 0; index < param.length; index += 1) {
-    let resposta = 0;
-    for (let comparador = 0; comparador < param.length; comparador += 1) {
-      if (param[index] === param[comparador]) {
-        resposta += 1;
-      }
-    }
+    let resposta = segundoFor(param, index);
     if (resposta >= 3) {
       return false;
     }
