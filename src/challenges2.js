@@ -78,15 +78,11 @@ function compararC(a, b, c) {
   }
 }
 function triangleCheck(a, b, c) {
-  compararA(a, b, c);
-  compararB(a, b, c);
-  compararC(a, b, c);
-  if (compararA && compararB && compararC) {
+  if (compararA(a, b, c) && compararB(a, b, c) && compararC(a, b, c)) {
     return true;
   }
   return false;
 }
-
 // Desafio 13
 function hydrate(string) {
   // seu código aqui
