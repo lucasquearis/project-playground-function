@@ -1,4 +1,3 @@
-/* eslint-disable complexity */
 // Desafio 10
 function techList(tecnologias, nome) {
   tecnologias.sort();
@@ -35,7 +34,6 @@ function verificaIgualdade(indiceone, indicetwo) {
   }
   return false;
 }
-// eslint-disable-next-line sonarjs/cognitive-complexity
 function verificaRepeticao(param) {
   let resposta = 1;
   for (let index = 0; index < param.length; index += 1) {
@@ -64,11 +62,26 @@ function generatePhoneNumber(n) {
   return verificaArray(n);
 }
 // Desafio 12
+function compararA(a, b, c) {
+  if (a < (b + c) && a > Math.abs(b - c)) {
+    return true;
+  }
+}
+function compararB(a, b, c) {
+  if (b < (a + c) && b > Math.abs(a - c)) {
+    return true;
+  }
+}
+function compararC(a, b, c) {
+  if (c < (a + b) && c > Math.abs(a - b)) {
+    return true;
+  }
+}
 function triangleCheck(a, b, c) {
-  let comparacaoLadosA = a < (b + c) && a > Math.abs(b - c);
-  let comparacaoLadosB = b < (a + c) && b > Math.abs(a - c);
-  let comparacaoLadosC = c < (a + b) && c > Math.abs(a - b);
-  if (comparacaoLadosA && comparacaoLadosB && comparacaoLadosC) {
+  compararA(a, b, c);
+  compararB(a, b, c);
+  compararC(a, b, c);
+  if (compararA && compararB && compararC) {
     return true;
   }
   return false;
