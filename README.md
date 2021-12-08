@@ -1,14 +1,17 @@
 # Primeiro projeto em JavaScript aqui na Trybe
 
 Esse foi meu primeiro projeto em JavaScript qui na [Trybe](https://www.betrybe.com/):rocket:\
-[arquivo 1](https://lucasquearis.github.io/)
-[arquivo 2](https://lucasquearis.github.io/)
+[arquivo 1](https://github.com/lucasquearis/project-playground-function/blob/master/src/challenges.js)\
+[arquivo 2](https://github.com/lucasquearis/project-playground-function/blob/master/src/challenges2.js)
 
-<!-- ## Conteúdos práticados
+## Conteúdos práticados
 
-- Primeiras práticas com git, github.
-- Primeiros passos com HTML e CSS.
-- HTML semântico.
-- CSS Box model e posicionamento de elementos.
+- Lógica de programação
+- Condições if/else
+- Variáveis
+- Típos primitívos
+- Operadores Lógicos
+- Laços de repetição
+- Objetos e Funções
 
-[Readme Original requisitos do projeto](https://github.com/lucasquearis/project-lessons-learned/blob/master/readmeOriginalProjeto.md); -->
+[Readme Original requisitos do projeto](https://github.com/lucasquearis/project-playground-function/blob/master/readmeOriginalProjeto.md);
